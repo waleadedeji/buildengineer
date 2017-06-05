@@ -8,7 +8,7 @@
 5. Edit this line in Vagranfile : centos.vm.network :"private_network", ip: "192.168.56.110"
 6. Change or modify the IP address to your private VirtualBox Host-Only Network address
 7. Change to the directory you extracted the repo files
-8. Run this command from prompt: vagrant up centos --provision
+8. Run this command from prompt: "vagrant up centos --provision"
 9. It will take about 25 mins for it to complete and do the followings:
 	    (a) It will launch a centOS 7 Vagrant Vm
 	    (b) Configure the VM with an IP address reachable to the hosting machine
@@ -18,3 +18,4 @@
 	    (f) Install, configure and start NGINX container to serve "Hello World" content
 10. To access the "Hello World" webpage type http://<PRIVATE IP> the IP you assigned in (5) above
     in my case i used http://192.168.56.110
+11. To cleanup after the exercise issue "vagrant destroy centos" from the prompt and no cruft is left on your machine
