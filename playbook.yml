@@ -2,30 +2,30 @@
 - hosts: all
   become: yes
   tasks:
-        - name: upgrade all packages
+        - name: Upgrade all packages
           yum: name=* state=present
           
-        - name: install docker-py with pip workaround for docker-py not installed
+        - name: Install docker-py with pip workaround for docker-py not installed
           pip: name=docker-py
                       
         - name: Copy Repo to guest  
           copy: src=/vagrant/docker.repo dest=/etc/yum.repos.d/
           
-        - name: install docker
+        - name: Install docker
           yum: name=docker-engine state=present 
           
-        - name: start docker service
+        - name: Start docker service
           service: name=docker state=started enabled=yes
           notify:
             - reload systemctl 
         
-        - name: allow vagrant user to run docker commands without sudo
+        - name: Allow vagrant user to run docker commands without sudo
           command: usermod -aG docker vagrant
           
-        - name: build the nginx docker image
+        - name: Build the nginx docker image
           command: docker build -t webnginx:ver1 /vagrant
 
-        - name: run the docker container to serve the static "Hello Word"
+        - name: Start and run the nginx docker container to serve the static "Hello Word"
           docker:
             name: site
             image: webnginx:ver1
@@ -36,5 +36,5 @@
              - "80:80"          
 
   handlers:
-        - name: reload systemctl
+        - name: Reload systemctl
           command: systemctl daemon-reload 
