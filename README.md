@@ -9,7 +9,7 @@
 6. Change or modify the IP address to your private VirtualBox Host-Only Network address
 7. Change to the directory you extracted the repo files
 8. Run this command from prompt: vagrant up centos --provision
-9. It will take about 25 mins for it to complete
+9. It will take about 25 mins for it to complete and do the followings:
 	    (a) It will launch a centOS 7 Vagrant Vm
 	    (b) Configure the VM with an IP address reachable to the hosting machine
 	    (c) Ansible installed and configured as provisioner
