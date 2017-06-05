@@ -17,7 +17,7 @@
         - name: Start docker service
           service: name=docker state=started enabled=yes
           notify:
-            - reload systemctl 
+            - Reload systemctl 
         
         - name: Allow vagrant user to run docker commands without sudo
           command: usermod -aG docker vagrant
