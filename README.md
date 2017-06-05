@@ -16,6 +16,6 @@
 	    (d) Install and start Docker
 	    (e) Build a Docker image  based on the official Alpine Linux 
 	    (f) Install, configure and start NGINX container to serve "Hello World" content
-10. To access the "Hello World" webpage type http://xxxx.xxxx.xxxx.xxx '<<PRIVATE IP>>' the IP you assigned in (5) above
-    in my case i used http://192.168.56.110
+10. To access the "Hello World" webpage type http://xxxx.xxxx.xxxx.xxxx the IP you assigned in (5) above
+    in my case i used http://192.168.56.110 
 11. To cleanup after the exercise issue "vagrant destroy centos" from the prompt and no cruft is left on your machine
