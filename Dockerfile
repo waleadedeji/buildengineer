@@ -1,6 +1,6 @@
 FROM library/alpine:latest
 
-MAINTAINER waleAdedeji
+LABEL maitainer waleAdedeji
 
 # Install nginx
 RUN apk add --update nginx && rm -rf /var/cache/apk/*
