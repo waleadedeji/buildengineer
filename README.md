@@ -19,3 +19,4 @@
 10. To access the "Hello World" webpage type http://xxxx.xxxx.xxxx.xxxx the IP you assigned in (5) above
     in my case i used http://192.168.56.110 
 11. To cleanup after the exercise issue "vagrant destroy centos" from the prompt and no cruft is left on your machine
+12. Added a little test script to confirm nginx webserver containter is running, to run the script logon to the vagrant box with user         vagrant, cd /tmp and then sudo ./test , it should say "NGINX Container is running"
