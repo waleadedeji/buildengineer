@@ -12,6 +12,9 @@
         - name: Copy Repo to guest  
           copy: src=/vagrant/docker.repo dest=/etc/yum.repos.d/
           
+        - name: Copy test script to guest  
+          copy: src=/vagrant/test.sh dest=/tmp
+          
         - name: Install docker
           yum: name=docker-engine state=present 
           
